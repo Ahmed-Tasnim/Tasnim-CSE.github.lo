@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATION OF MEDICINES WEBSITE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="img-box" class="small">
+		<div class="shadow1"></div>
+		<div class="shadow2"></div>
+		<img src="gallery/img-1.jpg" id="smallimg">
+	</div>
+	<div class="imageList">
+		<ul>
+			<li onclick="onHOME()">HOME</li>
+			<li onclick="onIMAGES()">IMAGES</li>
+			<li onclick="onVEDIOS()">VEDIOS</li>
+			<li onclick="onMEDICINES()">MEDICINES</li>
+			<li onclick="onLOGIN()">LOGIN</li>
+			<li onclick="onSOCIALMEDIA()">SOCIAL MEDIA</li>
+			<li onclick="onABOUTUS()">ABOUT US</li>
+		</ul>
+	</div>
+	<div class="btn-box" onclick="imageSize()">
+		<span id="btnIcon">&#9779;</span>
+		
+	</div>
+	<script type="text/javascript">
+		var smallImg =document.getElementById("smallimg");
+		var imgBox =document.getElementById("img-box");
+		var menuIcon =document.getElementById("btnIcon");
+
+		function onHOME() {
+			smallImg.src ="gallery/img-1.jpg";
+		}
+		function onIMAGES() {
+			smallImg.src ="gallery/img-2.jpg";
+		}
+		function onVEDIOS() {
+			smallImg.src ="gallery/img-3.jpg";
+		}
+		function onMEDICINES() {
+			smallImg.src ="gallery/img-4.jpg";
+		}
+		function onLOGIN() {
+			smallImg.src ="gallery/img-5.jpg";
+		}
+		function onSOCIALMEDIA() {
+			smallImg.src ="gallery/img-6.jpg";
+		}
+		function onABOUTUS() {
+			smallImg.src ="gallery/img-7.jpg";
+		}
+		function imageSize(){
+			if (imgBox.className == "small") {
+				imgBox.className="full";
+				menuIcon.innerHTML = "&#9779";
+			}
+			else{
+				imgBox.className = "small";
+				menuIcon.innerHTML = "&#10006";
+			}
+		}
+		
+	</script>
+
+</body>
+</html>
